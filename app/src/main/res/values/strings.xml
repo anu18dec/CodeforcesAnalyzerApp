@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CodeForcesAnalyzer</string>
+    <string name="handle">User Handle</string>
+    <string name="Ratings">Problem ratings</string>
+    <string name="Levels">Problem levels</string>
+    <string name="Languages">Languages</string>
+    <string name="Verdict">Verdicts</string>
+
+
+
+
+</resources>
