@@ -8,303 +8,324 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     >
-    <ScrollView
-        android:id="@+id/scroll_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="none"
+<!--    <ScrollView-->
+<!--        android:id="@+id/scroll_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:scrollbars="none"-->
+<!--        android:background="@color/material_dynamic_neutral_variant90"-->
+
+
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        >-->
+
+
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:id="@+id/internal_root"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:clipChildren="false"-->
+<!--            android:clipToPadding="false"-->
+<!--            android:padding="10dp"-->
+<!--            >-->
+
+
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/search_button_layout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="@dimen/_80sdp"-->
+<!--                android:clipChildren="false"-->
+<!--                android:clipToPadding="false"-->
+<!--                android:padding="10dp"-->
+
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                >-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:id="@+id/outlinedTextField"-->
+<!--                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    app:boxCornerRadiusBottomEnd="12dp"-->
+<!--                    app:boxCornerRadiusBottomStart="12dp"-->
+<!--                    app:boxCornerRadiusTopEnd="12dp"-->
+<!--                    app:boxCornerRadiusTopStart="12dp"-->
+<!--                    app:boxStrokeWidthFocused="4dp"-->
+<!--                    app:startIconDrawable="@drawable/ic_baseline_search_24"-->
+<!--                    app:endIconMode="clear_text"-->
+
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toStartOf="@+id/search_btn"-->
+<!--                    app:layout_constraintHorizontal_bias="0.5"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    >-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/edittext"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:hint="@string/handle"-->
+<!--                        android:textSize="20sp"-->
+<!--                        app:helperTextEnabled="false"-->
+<!--                        app:errorEnabled="false"-->
+<!--                        app:errorTextColor="?attr/colorError"-->
+<!--                        />-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton-->
+<!--                    android:id="@+id/search_btn"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    app:icon="@drawable/ic_codeforces_logo"-->
+
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHorizontal_bias="0.5"-->
+<!--                    app:layout_constraintStart_toEndOf="@+id/outlinedTextField"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    />-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--            <com.google.android.material.progressindicator.LinearProgressIndicator-->
+<!--                android:id="@+id/progress_indicator"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:indeterminate="true"-->
+<!--                app:trackCornerRadius="4dp"-->
+<!--                android:visibility="gone"-->
+
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/search_button_layout"-->
+
+<!--                />-->
+
+
+
+<!--            <com.google.android.material.textview.MaterialTextView-->
+<!--                android:id="@+id/rating_view_title"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:textSize="24sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:text="@string/Ratings"-->
+<!--                android:visibility="gone"-->
+
+
+<!--                app:layout_constraintStart_toStartOf="@id/card_view_rating_count"-->
+<!--                app:layout_constraintBottom_toTopOf="@+id/card_view_rating_count"-->
+<!--                >-->
+<!--            </com.google.android.material.textview.MaterialTextView>-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/card_view_rating_count"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="300dp"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                app:cardCornerRadius="15dp"-->
+<!--                app:cardElevation="8dp"-->
+<!--                app:cardMaxElevation="8dp"-->
+<!--                app:cardPreventCornerOverlap="true"-->
+<!--                app:cardUseCompatPadding="true"-->
+<!--                android:visibility="gone"-->
+
+
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/progress_indicator"-->
+<!--                >-->
+<!--                <com.github.mikephil.charting.charts.BarChart-->
+<!--                    android:id="@+id/rating_count_chart"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginBottom="10dp"-->
+<!--                    />-->
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+
+<!--            <com.google.android.material.textview.MaterialTextView-->
+<!--                android:id="@+id/level_view_title"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:textSize="24sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:text="@string/Levels"-->
+<!--                android:visibility="gone"-->
+
+<!--                app:layout_constraintStart_toStartOf="@id/card_view_level_count"-->
+<!--                app:layout_constraintBottom_toTopOf="@+id/card_view_level_count"-->
+<!--                >-->
+<!--            </com.google.android.material.textview.MaterialTextView>-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/card_view_level_count"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="300dp"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                app:cardCornerRadius="15dp"-->
+<!--                app:cardElevation="8dp"-->
+<!--                app:cardMaxElevation="8dp"-->
+<!--                app:cardPreventCornerOverlap="true"-->
+<!--                app:cardUseCompatPadding="true"-->
+<!--                android:visibility="gone"-->
+
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/card_view_rating_count"-->
+<!--                >-->
+<!--                <com.github.mikephil.charting.charts.BarChart-->
+<!--                    android:id="@+id/level_count_chart"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginBottom="10dp"-->
+<!--                    />-->
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <com.google.android.material.textview.MaterialTextView-->
+<!--                android:id="@+id/verdict_view_title"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:textSize="24sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:text="@string/Verdict"-->
+<!--                android:visibility="gone"-->
+
+<!--                app:layout_constraintStart_toStartOf="@id/card_view_verdict"-->
+<!--                app:layout_constraintBottom_toTopOf="@+id/card_view_verdict"-->
+<!--                >-->
+<!--            </com.google.android.material.textview.MaterialTextView>-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/card_view_verdict"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/_400sdp"-->
+<!--                app:cardElevation="8dp"-->
+<!--                app:cardCornerRadius="15dp"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                app:cardMaxElevation="8dp"-->
+<!--                app:cardPreventCornerOverlap="true"-->
+<!--                app:cardUseCompatPadding="true"-->
+<!--                android:visibility="gone"-->
+
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/card_view_level_count"-->
+<!--                >-->
+
+<!--                <com.anychart.AnyChartView-->
+<!--                    android:id="@+id/verdict_chart"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    >-->
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="25dp"-->
+<!--                        android:background="@android:color/white"-->
+<!--                        android:layout_gravity="bottom"-->
+<!--                        />-->
+
+<!--                </com.anychart.AnyChartView>-->
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+
+<!--            <com.google.android.material.textview.MaterialTextView-->
+<!--                android:id="@+id/language_view_title"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:textSize="24sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:text="@string/Languages"-->
+<!--                android:visibility="gone"-->
+
+<!--                app:layout_constraintStart_toStartOf="@id/card_view_languages"-->
+<!--                app:layout_constraintBottom_toTopOf="@+id/card_view_languages"-->
+<!--                >-->
+<!--            </com.google.android.material.textview.MaterialTextView>-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/card_view_languages"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/_400sdp"-->
+<!--                app:cardElevation="8dp"-->
+<!--                app:cardCornerRadius="15dp"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                app:cardMaxElevation="8dp"-->
+<!--                app:cardPreventCornerOverlap="true"-->
+<!--                app:cardUseCompatPadding="true"-->
+<!--                android:visibility="gone"-->
+
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/card_view_verdict"-->
+<!--                >-->
+
+
+
+<!--                <com.anychart.AnyChartView-->
+<!--                    android:id="@+id/language_chart"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    >-->
+
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="25dp"-->
+<!--                        android:background="@android:color/white"-->
+<!--                        android:layout_gravity="bottom"-->
+<!--                        />-->
+
+<!--                </com.anychart.AnyChartView>-->
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+<!--    </ScrollView>-->
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@color/material_dynamic_neutral_variant90"
 
-
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         >
+    </FrameLayout>
 
-
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/internal_root"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clipChildren="false"
-            android:clipToPadding="false"
-            android:padding="10dp"
-            >
-
-
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/search_button_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_80sdp"
-                android:clipChildren="false"
-                android:clipToPadding="false"
-                android:padding="10dp"
-
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                >
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/outlinedTextField"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    app:boxCornerRadiusBottomEnd="12dp"
-                    app:boxCornerRadiusBottomStart="12dp"
-                    app:boxCornerRadiusTopEnd="12dp"
-                    app:boxCornerRadiusTopStart="12dp"
-                    app:boxStrokeWidthFocused="4dp"
-                    app:startIconDrawable="@drawable/ic_baseline_search_24"
-                    app:endIconMode="clear_text"
-
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/search_btn"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    >
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edittext"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/handle"
-                        android:textSize="20sp"
-                        app:helperTextEnabled="false"
-                        app:errorEnabled="false"
-                        app:errorTextColor="?attr/colorError"
-                        />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                    android:id="@+id/search_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    app:icon="@drawable/ic_codeforces_logo"
-
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/outlinedTextField"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <com.google.android.material.progressindicator.LinearProgressIndicator
-                android:id="@+id/progress_indicator"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:indeterminate="true"
-                app:trackCornerRadius="4dp"
-                android:visibility="gone"
-
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/search_button_layout"
-
-                />
-
-
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/rating_view_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:text="@string/Ratings"
-                android:visibility="gone"
-
-
-                app:layout_constraintStart_toStartOf="@id/card_view_rating_count"
-                app:layout_constraintBottom_toTopOf="@+id/card_view_rating_count"
-                >
-            </com.google.android.material.textview.MaterialTextView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_rating_count"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_marginTop="50dp"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="8dp"
-                app:cardMaxElevation="8dp"
-                app:cardPreventCornerOverlap="true"
-                app:cardUseCompatPadding="true"
-                android:visibility="gone"
-
-
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/progress_indicator"
-                >
-                <com.github.mikephil.charting.charts.BarChart
-                    android:id="@+id/rating_count_chart"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="10dp"
-                    />
-
-            </androidx.cardview.widget.CardView>
-
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/level_view_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:text="@string/Levels"
-                android:visibility="gone"
-
-                app:layout_constraintStart_toStartOf="@id/card_view_level_count"
-                app:layout_constraintBottom_toTopOf="@+id/card_view_level_count"
-                >
-            </com.google.android.material.textview.MaterialTextView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_level_count"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_marginTop="50dp"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="8dp"
-                app:cardMaxElevation="8dp"
-                app:cardPreventCornerOverlap="true"
-                app:cardUseCompatPadding="true"
-                android:visibility="gone"
-
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/card_view_rating_count"
-                >
-                <com.github.mikephil.charting.charts.BarChart
-                    android:id="@+id/level_count_chart"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="10dp"
-                    />
-
-            </androidx.cardview.widget.CardView>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/verdict_view_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:text="@string/Verdict"
-                android:visibility="gone"
-
-                app:layout_constraintStart_toStartOf="@id/card_view_verdict"
-                app:layout_constraintBottom_toTopOf="@+id/card_view_verdict"
-                >
-            </com.google.android.material.textview.MaterialTextView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_verdict"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_400sdp"
-                app:cardElevation="8dp"
-                app:cardCornerRadius="15dp"
-                android:layout_marginTop="50dp"
-                app:cardMaxElevation="8dp"
-                app:cardPreventCornerOverlap="true"
-                app:cardUseCompatPadding="true"
-                android:visibility="gone"
-
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/card_view_level_count"
-                >
-
-                <com.anychart.AnyChartView
-                    android:id="@+id/verdict_chart"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    >
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:background="@android:color/white"
-                        android:layout_gravity="bottom"
-                        />
-
-                </com.anychart.AnyChartView>
-
-            </androidx.cardview.widget.CardView>
-
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/language_view_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:text="@string/Languages"
-                android:visibility="gone"
-
-                app:layout_constraintStart_toStartOf="@id/card_view_languages"
-                app:layout_constraintBottom_toTopOf="@+id/card_view_languages"
-                >
-            </com.google.android.material.textview.MaterialTextView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_languages"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_400sdp"
-                app:cardElevation="8dp"
-                app:cardCornerRadius="15dp"
-                android:layout_marginTop="50dp"
-                app:cardMaxElevation="8dp"
-                app:cardPreventCornerOverlap="true"
-                app:cardUseCompatPadding="true"
-                android:visibility="gone"
-
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/card_view_verdict"
-                >
-
-
-
-                <com.anychart.AnyChartView
-                    android:id="@+id/language_chart"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    >
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:background="@android:color/white"
-                        android:layout_gravity="bottom"
-                        />
-
-                </com.anychart.AnyChartView>
-
-            </androidx.cardview.widget.CardView>
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    </ScrollView>
-
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/navigation_view_menu" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

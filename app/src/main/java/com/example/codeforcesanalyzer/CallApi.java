@@ -52,7 +52,7 @@ public class CallApi
                         } else if (error instanceof NoConnectionError) {
                             Toast.makeText(context, "Your device is not connected to internet.", Toast.LENGTH_LONG).show();
                         } else {
-                            Toast.makeText(context, "Something went wrong.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(context, "Something went wrong, maybe wrong username.", Toast.LENGTH_LONG).show();
                         }
                     }
                 }

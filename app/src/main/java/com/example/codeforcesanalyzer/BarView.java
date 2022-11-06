@@ -181,6 +181,9 @@ public class BarView
     //Methods to show charts in view
     public void showProblemBarsChart(BarChart barChart)
     {
+        //Fixing zoom issue while reloding
+        barChart.setFitBars(true);
+        barChart.fitScreen();
 
         String title = "Rating counts";
         ArrayList<String> ratingLabels = new ArrayList<>();
@@ -207,18 +210,22 @@ public class BarView
         barData.addDataSet(barDataSet);
         barChart.setData(barData);
 
-
         barChart.getXAxis().setLabelCount(entries.size());
         barChart.getXAxis().setValueFormatter(new IndexAxisValueFormatter(ratingLabels));
         barChart.getXAxis().setGranularityEnabled(true);
         
         ratingBarChart_config(barChart);
+        barChart.notifyDataSetChanged();
         barChart.invalidate();
 
     }
 
     public void showLevelBarsChart(BarChart barChart)
     {
+        //Fixing zoom issue while reloding
+        barChart.setFitBars(true);
+        barChart.fitScreen();
+
         String title = "Indexing counts";
         ArrayList<String> indexLabels = new ArrayList<>();
         ArrayList<BarEntry> entries = new ArrayList<>();
@@ -257,6 +264,7 @@ public class BarView
         barChart.getXAxis().setGranularityEnabled(true);
 
         levelBarChart_config(barChart);
+        barChart.notifyDataSetChanged();
         barChart.invalidate();
 
     }
@@ -347,7 +355,7 @@ public class BarView
 
         barChart.animateXY(1000, 1000);
         barChart.setVisibleXRangeMaximum(8);
-        
+
         YAxis yAxis = barChart.getAxisLeft();
         yAxis.setAxisMinimum(0f);
 
@@ -381,6 +389,8 @@ public class BarView
         barChart.animateXY(1000, 1000);
         barChart.setVisibleXRangeMaximum(8);
 
+
+
         YAxis yAxis = barChart.getAxisLeft();
         yAxis.setAxisMinimum(0f);
 
@@ -410,5 +420,7 @@ public class BarView
             return Color.parseColor("#aa0000");
 
     }
+
+
 
 }

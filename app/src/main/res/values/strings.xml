@@ -1,11 +1,15 @@
 <resources>
-    <string name="app_name">CodeForcesAnalyzer</string>
+    <string name="app_name">CodeForces Analyzer</string>
     <string name="handle">User Handle</string>
     <string name="Ratings">Problem ratings</string>
     <string name="Levels">Problem levels</string>
     <string name="Languages">Languages</string>
     <string name="Verdict">Verdicts</string>
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="comingSoon">Coming Soon</string>
+    <string name="home">Home</string>
+    <string name="contest">Contests</string>
 
 
 
