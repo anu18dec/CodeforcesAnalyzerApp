@@ -2,19 +2,24 @@ package com.example.codeforcesanalyzer;
 
 import android.os.Bundle;
 
+import androidx.appcompat.view.menu.MenuView;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
 
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.anychart.AnyChartView;
 import com.github.mikephil.charting.charts.BarChart;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
@@ -44,6 +49,7 @@ public class HomeFragment extends Fragment {
     BarChart levelBar;
     AnyChartView languageView;
     AnyChartView verdictView;
+    MenuItem menuItem;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -67,6 +73,7 @@ public class HomeFragment extends Fragment {
         languageCardView = view.findViewById(R.id.card_view_languages);
         verdictCardView = view.findViewById(R.id.card_view_verdict);
         indicator = view.findViewById(R.id.progress_indicator);
+        menuItem = view.findViewById(R.id.contest);
 
         searchButton.setOnClickListener(new View.OnClickListener()
         {
@@ -75,7 +82,15 @@ public class HomeFragment extends Fragment {
             {
                 String userName = Objects.requireNonNull(editText.getText()).toString();
                 indicator.setVisibility(View.VISIBLE);
-                run(userName);
+
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                ContestFragment contestFragment = (ContestFragment)fragmentManager.findFragmentByTag("contest");
+                assert contestFragment != null;
+                contestFragment.loadContests();
+
+                searchSubmissions(userName);
+
+
             }
         });
 
@@ -83,8 +98,7 @@ public class HomeFragment extends Fragment {
 
     }
 
-
-    void run(String userName)
+    void searchSubmissions(String userName)
     {
         String problemSetUrl = "https://codeforces.com/api/user.status?handle=" + userName;
 
@@ -110,6 +124,10 @@ public class HomeFragment extends Fragment {
         },indicator);
 
     }
+
+
+
+
 
     void showViews()
     {

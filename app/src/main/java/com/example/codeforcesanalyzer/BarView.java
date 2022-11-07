@@ -20,10 +20,14 @@ import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.Map;
 import java.util.Set;
+import java.util.TimeZone;
 import java.util.TreeMap;
 
 public class BarView
@@ -45,6 +49,27 @@ public class BarView
     }
 
     //Methods to extract data from JsonObject
+    public void setContestlist(ArrayList<ContestModel> contestlist)
+    {
+        JSONObject indContest ;
+        for (int i = 0; i < len; i++)
+        {
+            indContest = problem_array.optJSONObject(i);
+
+            long startTimeSeconds = indContest.optLong("startTimeSeconds");
+            long millis = startTimeSeconds*1000L;
+            Date date = new Date(millis);
+            SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-yyyy h:mm a");
+            String formattedDate = sdf.format(date);
+
+            String status = indContest.optString("phase");
+            if(status.equals("BEFORE"))
+                status = "UPCOMING";
+
+            contestlist.add(new ContestModel(indContest.optString("name"),formattedDate,status));
+
+        }
+    }
     public void setProblemBar() throws JSONException
     {
         ratingArray = new int[5001];
@@ -420,7 +445,6 @@ public class BarView
             return Color.parseColor("#aa0000");
 
     }
-
 
 
 }
