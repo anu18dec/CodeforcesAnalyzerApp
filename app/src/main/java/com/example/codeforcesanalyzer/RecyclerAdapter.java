@@ -1,6 +1,7 @@
 package com.example.codeforcesanalyzer;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,6 +35,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         holder.titleText.setText(contestList.get(position).title);
         holder.statusText.setText(contestList.get(position).status);
         holder.dateText.setText(contestList.get(position).date);
+
+        if(contestList.get(position).status.equals("UPCOMING"))
+            holder.statusText.setTextColor(Color.parseColor("#1c8d73"));
+        else
+            holder.statusText.setTextColor(Color.parseColor("#bf3312"));
+
 
     }
 
