@@ -8,7 +8,6 @@ Android application where user can analyze codeforces profile and can check deta
 4. Language chart
 5. List of upcoming and finished contest
 
-![Home Page](/assets/Home1.jpg?raw=true "Home Page")
 
-<img src="/assets/Home1.jpg" alt="HomePage" style="width:200px; height:200px"/>
-
+![Home1](https://github.com/anu18dec/CodeforcesAnalyzerApp/assets/88387189/67894a7b-862c-4c14-a417-96367550743a)
+<img src="https://github.com/anu18dec/CodeforcesAnalyzerApp/assets/88387189/67894a7b-862c-4c14-a417-96367550743a" width="100" height="100">
