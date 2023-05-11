@@ -8,5 +8,5 @@ Android application where user can analyze codeforces profile and can check deta
 4. Language chart
 5. List of upcoming and finished contest
 
-<img src="assets/Home1" alt="mypic" style="width:200px; height:200px"/>
+<img src="assets/Home1.jpg" alt="HomePage" style="width:200px; height:200px"/>
 
